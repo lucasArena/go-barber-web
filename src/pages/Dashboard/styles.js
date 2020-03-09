@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     padding: 20px;
+
     header {
         display: flex;
         flex-direction: row;
@@ -37,7 +38,7 @@ export const Time = styled.li`
 
     time {
         font-size: 24px;
-        color: ${props => (props.available ? '#999' : '#7159c1')};
+        color: ${props => (props.available || props.past ? '#999' : '#7159c1')};
     }
 
     span {

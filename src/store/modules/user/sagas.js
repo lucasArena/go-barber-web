@@ -12,8 +12,9 @@ function* updateProfile({ payload }) {
             name,
             email,
             avatar_id,
-            ...(rest.oldPassoword ? rest : {})
+            ...(rest.oldPassword ? { ...rest } : {})
         };
+
         const user = yield call(api.put, '/users', profile);
         yield put(Actions.updateProfileSuccess(user));
         toast.success('Perfil alterado com sucesso');

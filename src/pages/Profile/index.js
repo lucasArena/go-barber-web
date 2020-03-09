@@ -30,9 +30,18 @@ export default function Profile() {
 
                 <hr />
 
-                <Input name="oldPassword" placeholder="Senha atual" />
-                <Input name="password" placeholder="Nova senha" />
                 <Input
+                    type="password"
+                    name="oldPassword"
+                    placeholder="Senha atual"
+                />
+                <Input
+                    type="password"
+                    name="password"
+                    placeholder="Nova senha"
+                />
+                <Input
+                    type="password"
                     name="confirmPassword"
                     placeholder="Confirmar nova senhsa"
                 />
