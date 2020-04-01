@@ -16,6 +16,7 @@ function* signIn({ payload }) {
 
         if (!user.provider) {
             toast.error('Usuário não é um prestador');
+            yield put(authActions.signFailure());
             return;
         }
 

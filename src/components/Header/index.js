@@ -32,8 +32,9 @@ export default function Header() {
                         </p>
                         <img
                             src={
-                                profile.avatar.url ||
-                                'https://api.adorable.io/avatars/50/demo@adorable.io.png'
+                                profile.avatar
+                                    ? profile.avatar.url
+                                    : 'https://api.adorable.io/avatars/50/demo@adorable.io.png'
                             }
                             alt="Foto perfil"
                         />
